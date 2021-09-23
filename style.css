@@ -6,8 +6,10 @@
 :root {
   --main-bg-color: #0c042c;
   --bright-purple: #7213c3;
+  --purple: #420f6d;
   --bright-blue: #11f2f7;
   --white: #f7f6f8;
+  --white-purple: #c0b3cb;
   --darker-purple: #420d7e;
 }
 
@@ -116,6 +118,8 @@ select {
   font-family: "quartoutline";
   src: url("./webfontkit/quart-outline-webfont.woff2") format("woff2"),
     url("./webfontkit/quart-outline-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -135,13 +139,53 @@ select {
 }
 
 body {
+  color: var(--white-purple);
   background-color: var(--main-bg-color);
+  font-family: "robotolight";
 }
 
 a {
   text-decoration: none;
   outline: none;
   color: var(--bright-blue);
+}
+
+h1 {
+  font-family: "strretch_sans_freeregular";
+  font-weight: normal;
+  font-style: normal;
+  margin: 0 0 60px 0;
+  font-size: 80px;
+  line-height: 1;
+}
+
+h2 {
+  font-family: "robotomedium";
+  font-size: 40px;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0 0 48px 0;
+}
+
+h6 {
+  font-family: "robotomedium";
+  font-family: "robotomedium";
+  font-size: 22px;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0 0 48px 0;
+}
+
+p{
+  
+  font-size: 18px;
+  letter-spacing: .6px;
+  line-height: 1.8;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0 0 0 0;
 }
 
 h5 {
@@ -152,47 +196,64 @@ h5 {
   font-style: normal;
 }
 
-.grid {
-  color: white;
-  display: flex;
+.section{
+
+}
+
+
+.container{
+  max-width: 1920px;
+  padding: 120px 40px;
+  margin: auto;
+}
+
+.light{
+  background-color: var(--white-purple);
+  color: var(--main-bg-color);
+}
+
+.testimonial{
+  margin: -210px auto 0 auto;
+  padding: 330px 40px 320px 40px;
+}
+
+.button {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-family: "robotomedium";
+  border-radius: 200px;
+  border: 2px solid var(--white);
+  padding: 9px 32px;
+  display: inline-block;
+}
+
+.hero{
+  padding: 190px 40px 0 40px;
+  text-align: center;
+  
+}
+
+.hero-link{
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  margin: 0 auto -50px auto;
+  border: 2px solid var(--white);
+  border-radius: 200px;
+  background-image: url("./assets/stars.png");
+  background-color: var(--main-bg-color);
+}
+
+.hero-image{
   width: 100%;
+  height: 600px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-.a {
-  padding-top: 10%;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10%;
-}
-
-.b {
-  background-color: #420d7e;
-  background-image: url("./assets/The_breakfast_club_poster_mockup_11x17_15ONE.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.line {
-  height: 10px;
-  width: 100%;
-  background-color: #420d7e;
-  margin-bottom: 20px;
-}
-
-.grid-item {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.ghost-logo {
-  width: 16rem;
-  margin-bottom: 30px;
-}
-
-.ghost-logo-two {
-  width: 19rem;
-  margin-bottom: 30px;
+.grid3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px 80px;
 }
