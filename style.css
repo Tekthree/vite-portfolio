@@ -1,3 +1,6 @@
+@import url("hamburger.css");
+
+
 * {
   margin: 0;
   padding: 0;
@@ -202,6 +205,28 @@ h5 {
   font-style: normal;
 }
 
+.page-wrapper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  width: 100%;
+  background-position: 50% 0%;
+  background-size: 90%;
+}
+
+.grain {
+  pointer-events: none;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 1;
+  background-image: url(./assets/noise.gif);
+  background-size: auto;
+  opacity: 0.04;
+}
+
 .section {
 }
 
@@ -225,7 +250,7 @@ h5 {
   padding: 0px 40px 0px 40px;
 }
 
-.header{
+.header {
   padding: 30px 40px 0px 40px;
 }
 
@@ -241,10 +266,9 @@ h5 {
 
 .header-links {
   padding: 0px 20px 0px 20px;
-
 }
 
-.headlink{
+.headlink {
   font-family: "quartoutline";
   font-weight: normal;
   font-style: normal;
@@ -252,18 +276,15 @@ h5 {
   line-height: 1;
 }
 
-
-.header-line{
+.header-line {
   height: 5px;
   width: 100%;
   background-color: var(--purple);
 }
 
-.header-logo{
+.header-logo {
   height: 90px;
 }
-
-
 
 .button {
   font-size: 12px;
@@ -297,6 +318,11 @@ h5 {
   height: 600px;
   max-width: 100%;
   object-fit: cover;
+}
+
+.mw{
+  max-width: 1000px;
+  margin: auto;
 }
 
 .grid3 {
@@ -360,7 +386,7 @@ h5 {
   display: flex;
 }
 
-.fcenter{
+.fcenter {
   align-items: center;
 }
 
@@ -372,4 +398,80 @@ h5 {
   padding: 0px 0px 0px 20px;
 }
 
+.hamburger{
+  display: none;
+}
 
+@media only screen and (max-width: 1000px){
+  /*Tablets [601px -> 1200px]*/
+  h1{
+    font-size: 60px;
+  }
+
+  .hamburger{
+    display: initial;
+  }
+
+  .header-links{
+    display: none;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px){
+	/*Big smartphones [426px -> 600px]*/
+  h1{
+    font-size: 45px;
+  }
+
+  .grid3{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-logo{
+    height: 70px;
+  }
+  
+}
+
+@media only screen and (max-width: 600px){
+	/*Small smartphones [325px -> 425px]*/
+
+  h1{
+    font-size: 35px;
+  }
+
+  .header-logo{
+    height: 50px;
+  }
+
+  .grid2{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid3{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ninety-percent{
+    width: 100%;
+  }
+
+  .footer-flex{
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+
+  .flex{
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  
+}
+
+
+  
