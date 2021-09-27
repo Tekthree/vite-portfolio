@@ -427,6 +427,7 @@ h5 {
 
   .grid3{
     grid-template-columns: 1fr 1fr;
+    grid-gap: 50px 50px;
   }
 
   .header-logo{
@@ -468,6 +469,11 @@ h5 {
   .flex{
     justify-content: center;
     padding-bottom: 20px;
+  }
+
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   
