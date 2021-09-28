@@ -1,10 +1,5 @@
+@import url("normalize.css");
 @import url("hamburger.css");
-
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 :root {
   --main-bg-color: #0c042c;
@@ -14,86 +9,6 @@
   --white: #f7f6f8;
   --white-purple: #c0b3cb;
   --darker-purple: #420d7e;
-}
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-div,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  color: var(--white-purple);
-  background-color: var(--main-bg-color);
-  font-family: "robotolight";
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 @font-face {
@@ -155,7 +70,7 @@ h1 {
   font-weight: normal;
   font-style: normal;
   margin: 0 0 60px 0;
-  font-size: 80px;
+  font-size: 5vw;
   line-height: 1;
 }
 
@@ -221,18 +136,37 @@ h5 {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  z-index: 1;
+  z-index: 3;
   background-image: url(./assets/noise.gif);
   background-size: auto;
   opacity: 0.04;
 }
 
-.section {
+.menu-open {
+  pointer-events: none;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 2;
+  background-color: var(--main-bg-color);
+}
+
+.popout-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(10rem, 19vw, 29rem) 40px 0 40px;
+}
+
+.popout-inactive{
+  display: none;
 }
 
 .container {
   max-width: 1920px;
-  padding: 120px 40px;
+  padding: 220px 40px;
   margin: auto;
 }
 
@@ -243,7 +177,7 @@ h5 {
 
 .testimonial {
   margin: -210px auto 0 auto;
-  padding: 330px 40px 120px 40px;
+  padding: 330px 40px 210px 40px;
 }
 
 .products {
@@ -254,7 +188,8 @@ h5 {
   padding: 30px 40px 0px 40px;
 }
 
-.footer {
+.fbottom {
+  padding: 220px 40px 120px 40px;
 }
 
 .header-flex {
@@ -306,7 +241,7 @@ h5 {
   z-index: 1;
   height: 100px;
   width: 100px;
-  margin: 0 auto -50px auto;
+  margin: 10px auto -50px auto;
   border: 2px solid var(--white);
   border-radius: 200px;
   background-image: url("./assets/stars.png");
@@ -320,15 +255,15 @@ h5 {
   object-fit: cover;
 }
 
-.mw{
-  max-width: 1000px;
+.mw {
+  max-width: 69vw;
   margin: auto;
 }
 
 .grid3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px 80px;
+  grid-gap: 60px 60px;
 }
 
 .grid2 {
@@ -398,86 +333,101 @@ h5 {
   padding: 0px 0px 0px 20px;
 }
 
-.hamburger{
+.hamburger {
   display: none;
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
   /*Tablets [601px -> 1200px]*/
-  h1{
-    font-size: 60px;
+  h1 {
+    font-size: 6vw;
   }
 
-  .hamburger{
+  .hamburger {
     display: initial;
   }
 
-  .header-links{
+  .header-links {
     display: none;
   }
 
+  .hero-link {
+    height: 75px;
+    width: 75px;
+    background-size: 110%;
+  }
 }
 
-
-@media only screen and (max-width: 800px){
-	/*Big smartphones [426px -> 600px]*/
-  h1{
-    font-size: 45px;
+@media only screen and (max-width: 900px) {
+  /*Big smartphones [426px -> 600px]*/
+  h1 {
+    font-size: 7vw;
   }
 
-  .grid3{
+  .mw {
+    max-width: 100vw;
+  }
+
+  .grid3 {
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px 50px;
   }
 
-  .header-logo{
+  .header-logo {
     height: 70px;
   }
-  
 }
 
-@media only screen and (max-width: 600px){
-	/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 600px) {
+  /*Small smartphones [325px -> 425px]*/
 
-  h1{
-    font-size: 35px;
+  h1 {
+    font-size: 7.5vw;
   }
 
-  .header-logo{
+  .hero {
+    padding: 110px 40px 0 40px;
+  }
+
+  .hero-link {
+    height: 65px;
+    width: 65px;
+  }
+
+  .mw {
+    max-width: 100vw;
+  }
+
+  .header-logo {
     height: 50px;
   }
 
-  .grid2{
+  .grid2 {
     display: flex;
     flex-direction: column;
   }
 
-  .grid3{
+  .grid3 {
     display: flex;
     flex-direction: column;
   }
 
-  .ninety-percent{
+  .ninety-percent {
     width: 100%;
   }
 
-  .footer-flex{
+  .footer-flex {
     text-align: center;
     flex-direction: column-reverse;
   }
 
-  .flex{
+  .flex {
     justify-content: center;
     padding-bottom: 20px;
   }
 
-  .container{
+  .container {
     padding-left: 20px;
     padding-right: 20px;
   }
-
-  
 }
-
-
-  

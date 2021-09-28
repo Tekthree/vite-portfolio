@@ -1,7 +1,10 @@
 import './style.css'
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Change Up</a>
-`
+
+
+$('.hamburger').on('click', function() {
+  $('.hamburger').toggleClass('is-active');
+  $('.popout-menu').toggleClass('menu-open');
+  $('.popout-nav').toggleClass('popout-inactive');
+});
 
