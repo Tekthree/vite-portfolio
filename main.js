@@ -13,7 +13,7 @@ $('.hamburger').on('click', function() {
 
 // -------------- API call to backend ------------------- //
 async function getBlock(){
-  await axios.get('http://localhost:3001/block-children')
+  await axios.get('https://backend-for-notion.herokuapp.com/block-children')
     .then(res =>{
       console.log('success', res.data.results[3].paragraph.text[0].plain_text)
 
