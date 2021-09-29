@@ -59,6 +59,10 @@
   font-style: normal;
 }
 
+.overhidden{
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   outline: none;
