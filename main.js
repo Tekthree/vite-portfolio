@@ -15,10 +15,9 @@ $('.hamburger').on('click', function() {
 async function getBlock(){
   await axios.get('https://backend-for-notion.herokuapp.com/block-children')
     .then(res =>{
-      console.log('success', res.data.results[3].paragraph.text[0].plain_text)
+      console.log('success', res.data.results)
 
-      let herotext = res.data.results[3].paragraph.text[0].plain_text
-
+      let herotext = res.data.results[3].paragraph.text[0].plain_text;
       $('.mw').text(herotext);
 
     })
