@@ -37,15 +37,7 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  color: var(--white-purple);
-  background-color: var(--main-bg-color);
-  font-family: "robotolight";
-}
+
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {

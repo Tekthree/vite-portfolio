@@ -2,6 +2,8 @@
 @import url("hamburger.css");
 
 :root {
+
+  /* ---------- colors ----------------*/
   --main-bg-color: #0c042c;
   --bright-purple: #7213c3;
   --purple: #420f6d;
@@ -9,6 +11,45 @@
   --white: #f7f6f8;
   --white-purple: #c0b3cb;
   --darker-purple: #420d7e;
+
+
+  /* ---------- sizing ----------------*/
+  --container-padding: 220px 40px;
+  --popout-nav-padding: clamp(10rem, 19vw, 29rem) 40px 0 40px;
+  --testimonial-padding: 330px 40px 210px 40px;
+  --testimonial-margin: -210px auto 0 auto;
+  --products-padding: 0px 40px 0px 40px;
+  --header-padding: 30px 40px 0px 40px;
+  --fbottom-padding: 220px 40px 120px 40px;
+  --hero-padding: 190px 40px 0 40px;
+
+  --header-links-padding: 0px 20px 0px 20px;
+  --footer-links-padding: 0px 20px 0px 20px;
+
+  --button-padding: 9px 52px;
+
+
+  /* ---------- grid gap ----------------*/
+
+  --grid3-gap: 60px 60px;
+  --grid2-gap: 60px 20px;
+
+
+  /* -------------- max width ------------*/
+
+  --mw-max-width: 69vw;
+  --container-max-width: 1920px;
+
+
+  /* -------------- font size ---------------*/
+  --h1-fontsize: 3.97em;
+  --h2-fontsize: 2.45em;
+  --h3-fontsize: 2.45em;
+  --h4-fontsize: 2.45em;
+  --h5-fontsize: 2.45em;
+  --h6-fontsize: 1.52em;
+  --p-fontsize: 0.94em;
+
 }
 
 @font-face {
@@ -59,6 +100,17 @@
   font-style: normal;
 }
 
+/* Set core body defaults */
+body {
+  font-size: 1vw;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: var(--white-purple);
+  background-color: var(--main-bg-color);
+  font-family: "robotolight";
+}
+
 .overhidden{
   overflow: hidden;
 }
@@ -74,22 +126,26 @@ h1 {
   font-weight: normal;
   font-style: normal;
   margin: 0 0 60px 0;
-  font-size: 5vw;
+  font-size: var(--h1-fontsize);
   line-height: 1;
 }
 
 h2 {
   font-family: "robotomedium";
-  font-size: 40px;
+  font-size: var(--h2-fontsize);
   line-height: 1;
   font-weight: normal;
   font-style: normal;
   margin: 0 0 48px 0;
 }
 
+h3{
+  font-size: var(--h3-fontsize);
+}
+
 h4 {
   font-family: "quartoutline";
-  font-size: 40px;
+  font-size: var(--h4-fontsize);
   line-height: 1;
   color: var(--bright-blue);
   font-weight: normal;
@@ -97,10 +153,18 @@ h4 {
   margin: 0 0 10px 0;
 }
 
+h5 {
+  font-family: "quartoutline";
+  font-size: var(--h5-fontsize);
+  line-height: 1.5;
+  font-weight: normal;
+  font-style: normal;
+}
+
 h6 {
   font-family: "robotomedium";
   font-family: "robotomedium";
-  font-size: 22px;
+  font-size: var(--h6-fontsize);
   line-height: 1;
   font-weight: normal;
   font-style: normal;
@@ -108,7 +172,7 @@ h6 {
 }
 
 p {
-  font-size: 18px;
+  font-size: var(--p-fontsize);
   letter-spacing: 0.6px;
   line-height: 1.8;
   font-weight: normal;
@@ -116,13 +180,7 @@ p {
   margin: 0 0 0 0;
 }
 
-h5 {
-  font-family: "quartoutline";
-  font-size: 40px;
-  line-height: 1.5;
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 .page-wrapper {
   position: relative;
@@ -161,7 +219,7 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(10rem, 19vw, 29rem) 40px 0 40px;
+  padding: var(--popout-nav-padding);
 }
 
 .popout-inactive{
@@ -169,8 +227,8 @@ h5 {
 }
 
 .container {
-  max-width: 1920px;
-  padding: 220px 40px;
+  max-width: var(--container-max-width);
+  padding: var(--container-padding);
   margin: auto;
 }
 
@@ -180,20 +238,20 @@ h5 {
 }
 
 .testimonial {
-  margin: -210px auto 0 auto;
-  padding: 330px 40px 210px 40px;
+  margin: var(--testimonial-margin);
+  padding: var(--testimonial-padding);
 }
 
 .products {
-  padding: 0px 40px 0px 40px;
+  padding: var(--products-padding);
 }
 
 .header {
-  padding: 30px 40px 0px 40px;
+  padding: var(--header-padding);
 }
 
 .fbottom {
-  padding: 220px 40px 120px 40px;
+  padding: var(--fbottom-padding);
 }
 
 .header-flex {
@@ -204,14 +262,14 @@ h5 {
 }
 
 .header-links {
-  padding: 0px 20px 0px 20px;
+  padding: var(--header-links-padding);
 }
 
 .headlink {
   font-family: "quartoutline";
   font-weight: normal;
   font-style: normal;
-  font-size: 40px;
+  font-size: 2.45em;
   line-height: 1;
 }
 
@@ -231,12 +289,12 @@ h5 {
   font-family: "robotomedium";
   border-radius: 200px;
   border: 2px solid var(--white);
-  padding: 9px 32px;
+  padding: var(--button-padding);
   display: inline-block;
 }
 
 .hero {
-  padding: 190px 40px 0 40px;
+  padding: var(--hero-padding);
   text-align: center;
 }
 
@@ -260,20 +318,20 @@ h5 {
 }
 
 .mw {
-  max-width: 69vw;
+  max-width: var(--mw-max-width);
   margin: auto;
 }
 
 .grid3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px 60px;
+  grid-gap: var(--grid3-gap);
 }
 
 .grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 60px 20px;
+  grid-gap: var(--grid2-gap);
 }
 
 .quote-img {
@@ -330,7 +388,7 @@ h5 {
 }
 
 .footer-links {
-  padding: 0px 20px 0px 20px;
+  padding: var(--footer-links-padding);
 }
 
 .last {
@@ -340,6 +398,12 @@ h5 {
 .hamburger {
   display: none;
 }
+
+@media only screen and (max-width: 1320px) {
+  body {font-size: 19.2px;}
+}
+
+
 
 @media only screen and (max-width: 1000px) {
   /*Tablets [601px -> 1200px]*/
