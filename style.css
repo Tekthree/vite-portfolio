@@ -42,13 +42,13 @@
 
 
   /* -------------- font size ---------------*/
-  --h1-fontsize: 3.97em;
+  --h1-fontsize: 4.97em;
   --h2-fontsize: 2.45em;
   --h3-fontsize: 2.45em;
   --h4-fontsize: 2.45em;
   --h5-fontsize: 2.45em;
   --h6-fontsize: 1.52em;
-  --p-fontsize: 0.94em;
+  --p-fontsize: clamp(1em, 1.3em, 1.4em);
 
 }
 
@@ -399,8 +399,8 @@ p {
   display: none;
 }
 
-@media only screen and (max-width: 1320px) {
-  body {font-size: 19.2px;}
+@media only screen and (max-width: 1220px) {
+  p {font-size: 22.2px;}
 }
 
 
