@@ -11,6 +11,7 @@
   --white: #f7f6f8;
   --white-purple: #c0b3cb;
   --darker-purple: #420d7e;
+  --darkest-purple: #312758;
 
 
   /* ---------- sizing ----------------*/
@@ -207,6 +208,54 @@ p {
   background-size: auto;
   opacity: 0.04;
 }
+
+.gradient {
+  pointer-events: none;
+  margin: 0 -70vw 0 0;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+  background-image: url(./assets/615f46c28f82ee18f2081645_gradient.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.54;
+}
+
+.marquee {
+  height: 1.4vw;
+  width: 22.3vw;
+  overflow: hidden;
+  position: relative;
+  font-family: "strretch_sans_freeregular";
+  color: var(--darkest-purple);
+  text-transform: uppercase;
+  font-size: 1.3vw;
+}
+
+.marquee div {
+  display: block;
+  width: 432%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -216%; }
+}
+
 
 .menu-open {
   pointer-events: none;
