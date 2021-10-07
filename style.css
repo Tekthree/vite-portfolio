@@ -21,7 +21,7 @@
   --products-padding: 0px 40px 0px 40px;
   --header-padding: 30px 40px 0px 40px;
   --fbottom-padding: 220px 40px 120px 40px;
-  --hero-padding: 190px 40px 0 40px;
+  --hero-padding: 15vw 40px 0 40px;
 
   --header-links-padding: 0px 20px 0px 20px;
   --footer-links-padding: 0px 20px 0px 20px;
@@ -37,18 +37,20 @@
 
   /* -------------- max width ------------*/
 
-  --mw-max-width: 69vw;
+  --mw-max-width: 79vw;
   --container-max-width: 1920px;
 
 
   /* -------------- font size ---------------*/
-  --h1-fontsize: 4.97em;
-  --h2-fontsize: 2.45em;
-  --h3-fontsize: 2.45em;
-  --h4-fontsize: 2.45em;
-  --h5-fontsize: 2.45em;
-  --h6-fontsize: 1.52em;
-  --p-fontsize: clamp(1em, 1.3em, 1.4em);
+  --h1-fontsize: 6.453454345vw;
+  --h2-fontsize: 92.59px;
+  --h3-fontsize: 69.46px;
+  --h4-fontsize: 52.11px;
+  --h5-fontsize: 39.09px;
+  --h6-fontsize: 29.33px;
+  --p-fontsize: 22.00pt;
+
+  --headlink-fontsize: 39.09px;
 
 }
 
@@ -102,7 +104,7 @@
 
 /* Set core body defaults */
 body {
-  font-size: 1vw;
+  font-size: 100%;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -125,7 +127,6 @@ h1 {
   font-family: "strretch_sans_freeregular";
   font-weight: normal;
   font-style: normal;
-  margin: 0 0 60px 0;
   font-size: var(--h1-fontsize);
   line-height: 1;
 }
@@ -154,7 +155,7 @@ h4 {
 }
 
 h5 {
-  font-family: "quartoutline";
+  font-family: "robotomedium";
   font-size: var(--h5-fontsize);
   line-height: 1.5;
   font-weight: normal;
@@ -162,7 +163,6 @@ h5 {
 }
 
 h6 {
-  font-family: "robotomedium";
   font-family: "robotomedium";
   font-size: var(--h6-fontsize);
   line-height: 1;
@@ -178,6 +178,10 @@ p {
   font-weight: normal;
   font-style: normal;
   margin: 0 0 0 0;
+}
+
+.border-radius{
+  border-radius: 1.823423423655467456vw;
 }
 
 
@@ -269,7 +273,7 @@ p {
   font-family: "quartoutline";
   font-weight: normal;
   font-style: normal;
-  font-size: 2.45em;
+  font-size: var(--headlink-fontsize);
   line-height: 1;
 }
 
@@ -280,7 +284,7 @@ p {
 }
 
 .header-logo {
-  height: 90px;
+  height: 4.9999234323345454546345vw;
 }
 
 .button {
@@ -317,10 +321,7 @@ p {
   object-fit: cover;
 }
 
-.mw {
-  max-width: var(--mw-max-width);
-  margin: auto;
-}
+
 
 .grid3 {
   display: grid;
@@ -353,7 +354,7 @@ p {
 
 .grid2-img {
   width: 100%;
-  height: 420px;
+  height: 520px;
   max-width: 100%;
   object-fit: cover;
 }
@@ -453,10 +454,7 @@ p {
     font-size: 7.5vw;
   }
 
-  .hero {
-    padding: 110px 40px 0 40px;
-  }
-
+  
   .hero-link {
     height: 65px;
     width: 65px;
