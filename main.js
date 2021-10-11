@@ -10,9 +10,7 @@ $('.hamburger').on('click', function() {
 });
 
 
-$('.header-logo').on('mouseenter mouseleave', function() {
-  $('.marquee').toggleClass('popout-inactive');
-});
+
 
 
 // -------------- API call to backend ------------------- //

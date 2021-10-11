@@ -121,7 +121,7 @@ body {
 a {
   text-decoration: none;
   outline: none;
-  color: var(--bright-blue);
+  color: var(--darkest-purple);
 }
 
 h1 {
@@ -182,7 +182,7 @@ p {
 }
 
 .border-radius{
-  border-radius: 1.823423423655467456vw;
+  border-radius: 0.8vw;
 }
 
 
@@ -319,7 +319,7 @@ p {
 }
 
 .headlink {
-  font-family: "quartoutline";
+  font-family: "quart";
   font-weight: normal;
   font-style: normal;
   font-size: var(--headlink-fontsize);
