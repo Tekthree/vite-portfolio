@@ -51,7 +51,7 @@
   --h6-fontsize: 29.33px;
   --p-fontsize: 22.00pt;
 
-  --headlink-fontsize: 39.09px;
+  --headlink-fontsize: 29.09px;
 
 }
 
@@ -266,6 +266,7 @@ p {
   bottom: 0%;
   z-index: 2;
   background-color: var(--main-bg-color);
+  transition: all 0.2s cubic-bezier(0.79, 0.31, 0, 1.18) 0.1s;
 }
 
 .popout-nav{
@@ -273,10 +274,12 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: var(--popout-nav-padding);
+  
 }
 
 .popout-inactive{
   display: none;
+  
 }
 
 .container {
